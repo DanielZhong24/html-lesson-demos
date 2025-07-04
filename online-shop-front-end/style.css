@@ -1,0 +1,137 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding-top: 20vh;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+header{
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #285c93;
+    color:white;
+    position: fixed;
+    width: 100%;
+    top:0;
+    left:0;
+    z-index: 1000;
+}
+
+a{
+    text-decoration: none;
+    color:white;
+    font-size: 1.5rem;
+    cursor:pointer;
+    padding-left: 20%;
+
+}
+
+a:hover{
+    color:rgba(245, 245, 245, 0.671);
+    text-decoration: underline;
+}
+
+.controls{
+    display: flex;
+    justify-content: center;
+    gap:10px;
+    margin: 20px 0;
+}
+
+input,select{
+    padding:8px;
+    font-size:1rem;
+}
+
+.product-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap:20px;
+}
+
+.product{
+    width: 250px;
+    background-color: white;
+    padding: 20px 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    transform: transform 0.2s ease-in-out;
+}
+
+.product:hover{
+    transform: scale(1.05);
+}
+
+.product img{
+    width: 100%;
+    object-fit:scale-down;
+    height: 150px;
+    border: 5px;
+}
+
+button{
+    padding:10px;
+    background-color: #007bff;
+    border:none;
+    cursor: pointer;
+    border-radius: 5px;
+    color:white;
+    transition: background 0.3s;
+}
+
+button:hover{
+    background-color: #0056b3;
+}
+
+
+#cart-container{
+    max-width:600px;
+    margin:auto;
+    text-align: center;
+    background-color: white;
+    padding:20px;
+    border-bottom: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.cart-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    padding:10px;
+}
+
+.cart-image{
+    width: 80px;
+    object-fit:scale-down;
+    border-radius: 5px;
+}
+
+.cart-details{
+    flex-grow:1;
+    text-align: center;
+    padding-left: 15px;
+}
+
+
+.quantity-input{
+    width: 60px;
+    text-align: center;
+}
+
+.remove-btn{
+    background-color: red;
+    color:white;
+    border: none;
+    padding: 5px 10px;
+    cursor:pointer;
+}
+
+.remove-btn:hover{
+    background-color: darkred;
+}
+

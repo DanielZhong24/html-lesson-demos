@@ -1,0 +1,24 @@
+[
+    { "id": 1, "name": "Laptop", "price": 999, "category": "electronics", "image": "images/laptop.jpg" },
+    { "id": 2, "name": "T-Shirt", "price": 20, "category": "clothing", "image": "images/tshirt.jpg" },
+    { "id": 3, "name": "Smartphone", "price": 699, "category": "electronics", "image": "images/phone.jpg" },
+    { "id": 4, "name": "Jeans", "price": 50, "category": "clothing", "image": "images/jeans.jpg" },
+    { "id": 5, "name": "Smartwatch", "price": 199, "category": "electronics", "image": "images/smartwatch.jpg" },
+    { "id": 6, "name": "Bluetooth Headphones", "price": 150, "category": "electronics", "image": "images/headphones.jpg" },
+    { "id": 7, "name": "Sneakers", "price": 80, "category": "clothing", "image": "images/sneakers.jpg" },
+    { "id": 8, "name": "Gaming Mouse", "price": 60, "category": "electronics", "image": "images/mouse.jpg" },
+    { "id": 9, "name": "Desk Lamp", "price": 35, "category": "home", "image": "images/lamp.jpg" },
+    { "id": 10, "name": "Wireless Keyboard", "price": 45, "category": "electronics", "image": "images/keyboard.jpg" },
+    { "id": 11, "name": "Backpack", "price": 55, "category": "accessories", "image": "images/backpack.jpg" },
+    { "id": 12, "name": "Coffee Maker", "price": 120, "category": "home", "image": "images/coffee_maker.jpg" },
+    { "id": 13, "name": "Sunglasses", "price": 40, "category": "accessories", "image": "images/sunglasses.jpg" },
+    { "id": 14, "name": "Wireless Charger", "price": 30, "category": "electronics", "image": "images/charger.jpg" },
+    { "id": 15, "name": "Desk Chair", "price": 150, "category": "home", "image": "images/chair.jpg" },
+    { "id": 16, "name": "Hoodie", "price": 60, "category": "clothing", "image": "images/hoodie.jpg" },
+    { "id": 17, "name": "Digital Camera", "price": 450, "category": "electronics", "image": "images/camera.jpg" },
+    { "id": 18, "name": "Portable Speaker", "price": 85, "category": "electronics", "image": "images/speaker.jpg" },
+    { "id": 19, "name": "Yoga Mat", "price": 25, "category": "home", "image": "images/yoga_mat.jpg" },
+    { "id": 20, "name": "Wallet", "price": 35, "category": "accessories", "image": "images/wallet.jpg" }
+]
+
+

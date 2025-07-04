@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math tutor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Your personal math tutor</h1>
+            <p class="tagline">Ask any math question and get instant help!</p>   
+        </header>
+        <!-- question input-->
+        <section id="question-input-section">
+            <label for="question" class="input-label">What's your math question?</label>
+            <textarea name="question" id="question" placeholder="e.g. What is the derivative of 2x^2"></textarea>
+            <div class="speical-characters">
+                <button type="button" onclick="insertCharacter('√')">√</button>
+                <button type="button" onclick="insertCharacter('^')">^</button>
+                <button type="button" onclick="insertCharacter('π')">π</button>
+                <button type="button" onclick="insertCharacter('∞')">∞</button>
+                <button type="button" onclick="insertCharacter('∫')">∫</button>
+                <button type="button" onclick="insertCharacter('≠')">≠</button>
+                <button type="button" onclick="insertCharacter('≤')">≤</button>
+                <button type="button" onclick="insertCharacter('≥')">≥</button>
+                <button type="button" onclick="insertCharacter('°')">°</button>
+            </div>
+            <button class="primary-button" onclick="askQuestion()">Get Answer</button>
+        </section>
+        
+        <section id="answer-section">
+            <h2>Answer:</h2>
+            <div id="answer-bo">
+                <p id="answer"></p>
+            </div>
+            <div class="practice-prompt hidden">
+                <p>Want more practice on this topic?</p>
+                <button class="secondary-button" onclick="generateQuestion()">Yes please</button>
+                <button class="secondary-button" onclick="no()">No thanks</button>
+            </div>
+        </section>
+        
+        <section id="practice-section">
+
+        </section>
+        <footer>
+            <p>&copy; 2025 Math Tutor - Powered by Gemini API</p>
+            <p>Demo</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+
