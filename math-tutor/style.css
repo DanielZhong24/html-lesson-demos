@@ -48,14 +48,14 @@ textarea{
 }
 
 
-.speical-characters{
+.special-characters{
     margin-bottom:15px;
     display: flex;
     flex-wrap:wrap;
     gap:8px;
 }
 
-.speical-characters button{
+.special-characters button{
     padding:8px 12px;
     font-size:16px;
     border: 1px solid #ccc;
@@ -64,7 +64,7 @@ textarea{
     background-color: #eee;
 }
 
-.speical-characters button:hover{
+.special-characters button:hover{
     background-color: #ddd;
 }
 

@@ -1,0 +1,118 @@
+body {
+  font-family: 'Fira Code', monospace;
+  background: linear-gradient(to right, #00d2ff, #3a7bd5);
+  color: #fff;
+  text-align: center;
+  padding: 60px;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 600px;
+  margin: auto;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #ffffff;
+  color: #007bff;
+  font-size: 18px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #e0e0e0;
+  transform: scale(1.1);
+}
+
+.voice-controls {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.voice-controls input {
+  width: 100%;
+}
+
+#output-box {
+  background-color: #1e1e2f;
+  color: #00ffc3;
+  font-family: 'Fira Code', monospace; 
+  font-size: 18px;
+  padding: 25px;
+  border-radius: 10px;
+  margin-top: 30px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  white-space: pre-wrap;
+  min-height: 120px;
+  position: relative;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+#output::after {
+  content: '▋';
+  animation: blink 0.8s infinite;
+  color: #00ffc3;
+  font-weight: bold;
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  50.01%, 100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.loading-spinner {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.spinner {
+  border: 16px solid #f3f3f3; 
+  border-top: 16px solid #3498db; 
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

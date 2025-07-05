@@ -96,10 +96,13 @@ async function generateQuestion(){
     }`;    
     
     let response = await askGemini(prompt);
-    response = response.substring(8,response.length-4);
+    const jsonStart = response.indexOf('{');
+    const jsonEnd = response.lastIndexOf('}') + 1;
+    const cleanJSON = response.slice(jsonStart, jsonEnd);
     console.log(response);
     try{
-        practiceQuestions = JSON.parse(response);
+        practiceQuestions = JSON.parse(cleanJSON);
+        currentQuestion = 1;
         createMultipleChoice(practiceQuestions[currentQuestion]);
     }catch(error){
         console.error("Error:", error);
@@ -108,14 +111,16 @@ async function generateQuestion(){
 }
 
 function no(){
-    const praticeChoice = document.getElementsByClassName("practice-prompt")[0];
-    praticeChoice.classList.add("hidden");
+    const practiceChoice = document.getElementsByClassName("practice-prompt")[0];
+    practiceChoice.classList.add("hidden");
+
+    const practiceSection = document.getElementById("practice-section");
+    practiceSection.innerHTML = "";  
 }
 
 
 function createMultipleChoice(practiceQuestion){
     let practiceSection = document.getElementById("practice-section");
-    practiceQuestion.innerHTML = "";
     let paragraph = document.createElement("p");
     paragraph.innerText = "QUESTION: " + practiceQuestion["question"];
     let optionA = document.createElement("input");
