@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Dream Pizza</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', sans-serif;
+      text-align: center;
+      background: #fff3e0;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #ff5722;
+      font-size: 2.5rem;
+    }
+
+    #pizza {
+      position: relative;
+      margin: 20px auto;
+      width: 80vw;
+      max-width: 500px;
+      height: 80vw;
+      max-height: 500px;
+      background-image: url('https://i.imgur.com/Hg6K9fE.png');
+      background-size: cover;
+      border-radius: 50%;
+      border: 6px solid #f57c00;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .topping {
+      width: 80px;
+      height: 80px;
+      margin: 10px;
+      cursor: grab;
+      transition: transform 0.2s ease;
+    }
+
+    .topping:hover {
+      transform: scale(1.1);
+    }
+
+    #topping-list {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 20px;
+      gap: 10px;
+    }
+
+    .placed {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      pointer-events: none;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .topping {
+        width: 60px;
+        height: 60px;
+      }
+
+      .placed {
+        width: 50px;
+        height: 50px;
+      }
+    }
+    footer {
+    position: fixed;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 0.9rem;
+    }
+
+    footer a {
+    color: #888;
+    text-decoration: none;
+    transition: color 0.3s;
+    }
+
+    footer a:hover {
+    color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>🍕 My Dream Pizza 🍕</h1>
+  <p>Drag toppings onto the pizza!</p>
+
+  <div id="pizza"></div>
+
+  <div id="topping-list">
+    <img src="pepperoni.png" class="topping" draggable="true" />
+    <img src="tomato.png" class="topping" draggable="true" />
+    <img src="basil.png" class="topping" draggable="true" />
+  </div>
+
+  <script>
+    const pizza = document.getElementById("pizza");
+    const toppings = document.querySelectorAll(".topping");
+
+    toppings.forEach(t => {
+      t.addEventListener("dragstart", (e) => {
+        e.dataTransfer.setData("src", t.src);
+      });
+    });
+
+    pizza.addEventListener("dragover", (e) => {
+      e.preventDefault();
+    });
+
+    pizza.addEventListener("drop", (e) => {
+      const rect = pizza.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const src = e.dataTransfer.getData("src");
+
+      const newTopping = document.createElement("img");
+      newTopping.src = src;
+      newTopping.className = "placed";
+      newTopping.style.left = `${x - 40}px`;
+      newTopping.style.top = `${y - 40}px`;
+
+      pizza.appendChild(newTopping);
+    });
+  </script>
+
+    <footer>
+    <p>
+        <a href="https://themoca.ca" target="_blank">← Want more? Check out MOCA International!</a>
+    </p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Favourite Animal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Fredoka', sans-serif;
+      background: linear-gradient(to right, #fdfcfb, #e2d1c3);
+      color: #333;
+      text-align: center;
+      padding: 20px;
+      animation: fadeIn 1s ease-in;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #ff6f61;
+      margin-bottom: 20px;
+      animation: slideDown 0.8s ease-out;
+    }
+
+    img {
+      width: 80%;
+      max-width: 350px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      transition: transform 0.4s ease;
+    }
+
+    img:hover {
+      transform: scale(1.05);
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin: 20px auto;
+      max-width: 700px;
+      animation: fadeInUp 1.2s ease;
+    }
+
+    .fun-fact {
+      background-color: #fff8dc;
+      border: 2px dashed #ffc107;
+      display: inline-block;
+      padding: 15px 20px;
+      margin-top: 20px;
+      font-size: 1.1rem;
+      border-radius: 15px;
+      animation: bounceIn 1.2s ease;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    @keyframes slideDown {
+      from {transform: translateY(-30px); opacity: 0;}
+      to {transform: translateY(0); opacity: 1;}
+    }
+
+    @keyframes fadeInUp {
+      from {transform: translateY(30px); opacity: 0;}
+      to {transform: translateY(0); opacity: 1;}
+    }
+
+    @keyframes bounceIn {
+      0% {transform: scale(0.5); opacity: 0;}
+      60% {transform: scale(1.05); opacity: 1;}
+      100% {transform: scale(1);}
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      .fun-fact {
+        font-size: 1rem;
+        padding: 10px 15px;
+      }
+    }
+    footer {
+    position: fixed;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 0.9rem;
+    }
+
+    footer a {
+    color: #888;
+    text-decoration: none;
+    transition: color 0.3s;
+    }
+
+    footer a:hover {
+    color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🐱 My Favourite Animal is a Cat! 🐱</h1>
+
+  <img src="https://images.unsplash.com/photo-1592194996308-7b43878e84a6" alt="Cute Cat" />
+
+  <p>
+    Cats are soft, cuddly, and love to nap in the sun. They are calm and sometimes a little silly, which makes them extra fun!
+  </p>
+
+  <div class="fun-fact">
+    <strong>Fun Fact:</strong> Cats can jump up to 6 times their height!
+  </div>
+    <footer>
+    <p>
+        <a href="https://themoca.ca" target="_blank">← Want more? Check out MOCA International!</a>
+    </p>
+    </footer>
+</body>
+</html>
